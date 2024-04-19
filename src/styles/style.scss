@@ -1,0 +1,211 @@
+  @font-face {
+	font-family: 'impact'; 
+	src: local('impact'), local('impact'),
+		url(../fonts/Impact.ttf); 
+}
+@font-face {
+	font-family: 'Nikkyou'; 
+	src: local('Nikkyou'), local('Nikkyou'),
+		url(../fonts/Nikkyou.ttf); 
+}
+@font-face {
+	font-family: 'Champagne'; 
+	src: local('Champagne'), local('Champagne'),
+		url(../fonts/Champagne.ttf); 
+}
+@font-face {
+	font-family: 'Exoplanetaria'; 
+	src: local('Exoplanetaria'), local('Exoplanetaria'),
+		url(../fonts/ZeroCool.ttf); 
+}
+
+@import '_global.scss';
+
+
+@import 'reset.scss';
+@import 'common.scss';
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
+
+
+html, body {
+	font-family: "Tilt Neon";
+}
+
+  #app {
+	height: 100%;
+  }
+  .container {
+	max-width: 1200px;
+	margin: 0px auto;
+	width: 100%;
+  }
+  .wrapper {
+	width: 100%;
+	position: absolute;
+	height: 100%;
+  }
+  .background {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	filter: blur(4px) brightness(0.6);
+  }
+  body {
+  }
+  main {
+	display: flex;
+	flex-flow: column nowrap;
+  }
+  .top {
+
+  }
+  .bottom-btns span {
+	font-size: 16px;
+	// text-shadow: #FFF 0px 0px 5px,
+  }
+  .bottom {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 0px;
+	order: 1;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+	  "anime-list"
+	  "observer";
+  }
+  .main {
+	padding-top: 70px;
+  }
+
+  .banner {
+
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	pointer-events: none;
+	object-position: top;
+  }
+  .banner-wrap {
+	grid-area: banner;
+	pointer-events: none;
+	position: relative;
+	height: 400px ;
+	&::before {
+	  content: "";
+	  width: 100%;
+	  height: 100px;
+	  position: absolute;
+	  top: 0px;
+	  left: 0;
+	  z-index: 0;
+	  background: rgb(255, 255, 255);
+	  background: linear-gradient(0deg,
+		  rgba(255, 255, 255, 0) 21%,
+		  rgb(0, 0, 0) 137%);
+  
+	  height: 100%;
+	  position: absolute;
+	  top: 0px;
+	  left: 0;
+	  z-index: 0;
+	  background: rgb(255, 255, 255);
+	  background: linear-gradient(0deg,
+		  rgba(255, 255, 255, 0) 14%,
+		  rgb(0, 0, 0) 107%);
+	}
+  }
+
+  .actions__wrapper {
+  }
+  .actions {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+	width: 100%;
+	z-index: 2;
+	background-color: rgb(24 26 42);
+
+  }
+  .action-panel {
+	  grid-area: action;
+	  width: 100%;
+
+  }
+  .anime-list {
+	grid-area: anime-list;
+  }
+  .v-input{
+
+  }
+  	.input__search {
+		  position: fixed;
+		  bottom: 40px;
+		  left: 50%;
+		  z-index: 10;
+		  width: 100%;
+		  transform: translateX(-50%);
+		  background: rgb(24 26 42);
+	}
+	.input__select {
+
+	}
+	.category {
+		height: 100%;
+		
+	}
+  .sidebar {
+	padding: 0 15px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin-top: 30px;
+	padding-top: 20px;
+	padding-bottom: 40px;
+	@media (max-width: 768px){
+		height: auto;
+
+		background-color: rgb(24, 26, 42);
+	}
+  }
+
+  .observer {
+	height: 150px;
+	grid-area: observer;
+  }
+  
+  .loading {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+  }
+
+  .slider {
+	position: relative;
+  }
+
+  .v-text-field .v-field__input input {
+padding: 0;
+
+}
+.v-field--variant-filled .v-field__overlay {
+    opacity: 1;
+    background-color: rgb(24 26 42);
+}
+.v-input__details {
+    display: none;
+}
+.v-expansion-panel-text {
+    max-height: 470px;
+}
+.anime-item {
+
+}
